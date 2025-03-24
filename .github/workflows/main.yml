@@ -23,7 +23,7 @@ jobs:
         run: mvn clean verify
 
       - name: SonarCloud Scan
-        run: mvn sonar:sonar
+        run: mvn sonar:sonar -Dsonar.projectKey=isnaayu_layeredArchitecture -Dsonar.organization=isnaayum
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
