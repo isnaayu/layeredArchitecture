@@ -2,7 +2,6 @@ package isnaayum.co.id.myproject.service.impl;
 
 import isnaayum.co.id.myproject.dto.request.UserRequest;
 import isnaayum.co.id.myproject.dto.response.UserResponse;
-import isnaayum.co.id.myproject.repository.UserRepository;
 import isnaayum.co.id.myproject.service.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
