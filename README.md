@@ -1,6 +1,6 @@
 # Layered Architecture with Java
 
-This repository implements a **Layered Architecture** in Java, integrating **JUnit**, **SonarQube**, and **ArchUnit** for testing and code quality assurance.
+This repository implements a **Layered Architecture** in Java, integrating **JUnit**, **SonarCloud**, **GitHub Actions**, and **ArchUnit** for testing, code quality assurance, and CI/CD.
 
 ## 📌 Project Structure
 The project follows the **Layered Architecture** approach, dividing the application into distinct layers:
@@ -11,24 +11,29 @@ The project follows the **Layered Architecture** approach, dividing the applicat
 - **Model Layer**: Defines data structures and entities.
 
 ## 🛠️ Technologies Used
-- **Java** (JDK 17 or later)
+- **Java** (JDK 21)
 - **Spring Boot** (for dependency management and REST API development)
 - **JUnit** (for unit testing)
-- **SonarQube** (for static code analysis)
+- **SonarCloud** (for static code analysis)
 - **ArchUnit** (for architecture rule enforcement)
+- **GitHub Actions** (for CI/CD automation)
+- **Docker** (for containerization)
 
 ## ⚡ Features
 - Implements **Layered Architecture** to ensure separation of concerns.
 - **Unit testing** with JUnit to validate business logic.
-- **Code quality analysis** with SonarQube.
+- **Code quality analysis** with SonarCloud.
 - **Architecture validation** using ArchUnit.
+- **CI/CD pipeline** using GitHub Actions for automated testing and deployment.
+- **Docker integration** for containerized deployment.
 
 ## 🚀 Getting Started
 ### Prerequisites
 Ensure you have the following installed:
-- JDK 17 or later
+- JDK 21
 - Maven (for dependency management)
-- SonarQube (optional, for code analysis)
+- Docker (for containerization)
+- SonarCloud account (for code analysis)
 
 ### Installation & Running the Project
 ```sh
@@ -46,8 +51,8 @@ mvn spring-boot:run
 mvn test
 ```
 
-### Running SonarQube Analysis
-Ensure you have SonarQube running locally, then execute:
+### Running SonarCloud Analysis
+Ensure your repository is linked to **SonarCloud**, then execute:
 ```sh
 mvn sonar:sonar
 ```
@@ -57,7 +62,19 @@ mvn sonar:sonar
 mvn test -Dtest=ArchUnitTest
 ```
 
-## 📜 License
+## 📔 Continuous Integration & Deployment (CI/CD)
+This project uses **GitHub Actions** to automate build, test, and deployment processes.
+
+### CI/CD Workflow Overview
+The GitHub Actions workflow is defined in [`.github/workflows/main.yml`](./.github/workflows/main.yml). It includes:
+1. **Build & Test**: Runs `mvn clean verify` to compile and test the project.
+2. **Code Quality Check**: Uses **SonarCloud** to analyze code quality.
+3. **Docker Build & Push**: Builds a Docker image and pushes it to Docker Hub (or another container registry).
+
+### GitHub Actions Status
+![GitHub Actions Build Status](https://github.com/isnaayu/layeredArchitecture/actions/workflows/main.yml/badge.svg)
+
+## 🐜 License
 This project is licensed under the MIT License.
 
 ## 🤝 Contributing
