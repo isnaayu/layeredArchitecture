@@ -2,6 +2,7 @@ package isnaayum.co.id.myproject.architecture;
 
 import com.tngtech.archunit.base.DescribedPredicate;
 import com.tngtech.archunit.core.domain.JavaClass;
+import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
@@ -15,7 +16,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.*;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 import static isnaayum.co.id.myproject.util.ArchitectureConstants.*;
 
-@AnalyzeClasses(packages = DEFAULT_PACKAGE)
+@AnalyzeClasses(packages = DEFAULT_PACKAGE, importOptions = ImportOption.DoNotIncludeTests.class)
 public class ArchitectureTests {
 
     private static final DescribedPredicate<JavaClass> anyServiceInterface = new DescribedPredicate<>("is a service interface") {

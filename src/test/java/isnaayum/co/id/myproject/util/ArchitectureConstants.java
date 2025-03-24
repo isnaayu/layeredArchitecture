@@ -1,7 +1,5 @@
 package isnaayum.co.id.myproject.util;
 
-import org.springframework.beans.factory.annotation.Value;
-
 public class ArchitectureConstants {
 //    Suffixes
     public static final String CONTROLLER_SUFFIX = "Controller";
