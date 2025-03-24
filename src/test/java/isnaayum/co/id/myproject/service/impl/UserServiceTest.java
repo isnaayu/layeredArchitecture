@@ -10,11 +10,10 @@ import org.mockito.Mockito;
 
 import java.util.UUID;
 
-public class UserServiceTest {
+class UserServiceTest {
 
     @Test
     void create(){
-        UserRepository userRepository = Mockito.mock(UserRepository.class);
         UserService userService = Mockito.mock(UserService.class);
 
         UserRequest userRequest = new UserRequest();
